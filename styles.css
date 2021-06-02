@@ -1,0 +1,117 @@
+:root{
+    --background-img: url(https://images.unsplash.com/photo-1505935428862-770b6f24f629?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1047&q=80);
+    --primary-color: #EFE7BC;
+    --secondary-color: #FFA384;
+    --third-color: #74BDCB;
+    --sub-color: #E7F2F8;
+    --text-color: #000;
+    font-size: 12px;
+}
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background: var(--background-img) no-repeat center center fixed;
+    background-size: cover;
+}
+#content{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+}
+#nav{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    background-color: var(--primary-color);
+}
+#nav > * {
+    font-size: 1.5rem;
+    padding: 1rem 1.5rem;
+}
+#nav > #brand{
+    text-align: center;
+    font-size: 3rem;
+    width: 100%;
+}
+#main{
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+}
+#main .header{
+    padding-top: 5vh;
+    font-size: 2.5em;
+    font-family: 'Pattaya', sans-serif;
+    text-shadow: inherit 1px 1px;
+}
+#main img.circle{
+    border-radius: 50%;
+    object-fit: contain;
+    max-width: 80%;
+}
+#footer{
+    padding: 1rem 0;
+    text-align: center;
+    background-color: var(--primary-color);
+}
+#footer > a{
+    color: inherit;
+}
+#page-name{
+    font-family: 'Pattaya', sans-serif;
+    font-size: 3rem;
+}
+#brand{
+    font-family: 'Pattaya', sans-serif;
+}
+.container{
+    padding: 0 clamp(20px, 5%, 40px);
+}
+.content{
+    padding: 2.5vh 0;
+    font-size: 1.5rem;
+}
+.col-2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 1rem;
+}
+.menu-item img{
+    max-width: 100%;
+    padding: 0.5rem;
+    border-radius: 1em;
+}
+.menu-item .menu-desc{
+    font-size: 1.2rem;
+}
+@media (min-width: 480px){
+    :root{
+        font-size: 15px;
+    }
+    #main img.circle{
+        border-radius: 50%;
+        object-fit: contain;
+        max-width: clamp(300px,40%,600px);
+    }
+    .container{
+        padding: 0 clamp(50px, 20%, 300px);
+    }
+    .content{
+        padding: 1.25vh 0;
+    }
+}
+
+@media (min-width: 769px){
+    .col-3-md{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 1fr;
+        gap: 1rem;
+    }
+}
